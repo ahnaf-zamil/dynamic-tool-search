@@ -8,3 +8,4 @@ dist
 *.db-*
 scratch/
 local_cache/
+.serena

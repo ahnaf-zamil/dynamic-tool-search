@@ -1,6 +1,7 @@
 import { Memory } from '@mastra/memory';
 import { PostgresStore, PgVector } from '@mastra/pg';
 import { fastembed } from '@mastra/fastembed';
+import { config } from './config';
 
 let sharedMemory: Memory | null = null;
 
@@ -23,10 +24,10 @@ export async function getSharedMemory(): Promise<Memory> {
     },
     embedder: fastembed,
     vector: new PgVector({
-      connectionString: process.env.DATABASE_URL!,
+      connectionString: config.database.url,
     }),
     storage: new PostgresStore({
-      connectionString: process.env.DATABASE_URL!,
+      connectionString: config.database.url,
     }),
   });
 
