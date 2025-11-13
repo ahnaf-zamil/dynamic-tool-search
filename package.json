@@ -1,15 +1,12 @@
 {
-  "name": "test-rag",
+  "name": "dynamic-tool-selector-agent",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "mastra dev",
-    "build": "mastra build",
-    "start": "mastra start"
+    "dev": "npx tsx src/main.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "K.M Ahnaf Zamil",
   "license": "ISC",
   "description": "",
   "type": "module",
